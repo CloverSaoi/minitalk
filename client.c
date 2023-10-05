@@ -48,4 +48,5 @@ int main (int argc, char **argv)
 	}
 	else 
 		return (write(1,"Invalid Entry! Please try again :)", 34));
+	return (0);
 }

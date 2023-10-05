@@ -48,11 +48,12 @@ void ft_putnbr(int n)
     write(1, &digit, 1);
 }
 
-int main()
+int main(void)
 {
-	write(1, "Welcome to Minitalk :)", 22);
+	write(1, "Welcome to Minitalk!\n", 21);
 	write(1, "Server PID:", 12);
 	ft_putnbr(getpid());
+	write(1, "\n", 1);
 	
 	while (4)
 	{

@@ -10,4 +10,25 @@
 #                                                                              #
 # **************************************************************************** #
 
+SERVER = server
+CLIENT = client
 
+CFLAGS = -Wall -Werror -Wextra
+CC = cc
+
+all: $(SERVER) $(CLIENT)
+$(SERVER):
+	$(CC) $(CFLAGS) server.c -o $(SERVER)
+	@echo "Server is Ready!"
+$(CLIENT):
+	$(CC) $(CFLAGS) client.c -o $(CLIENT)
+	@echo "Client is Ready!"
+
+clean:
+	@echo "clean successful"
+
+fclean: clean
+	@rm -f $(SERVER) $(CLIENT)
+	@echo "Server and Client Have Been Cleaned Successfully"
+
+re: fclean all
