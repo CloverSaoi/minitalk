@@ -6,7 +6,7 @@
 #    By: ddutta <ddutta@student.42adel.org.au>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/05 01:51:45 by ddutta            #+#    #+#              #
-#    Updated: 2023/10/05 01:51:47 by ddutta           ###   ########.fr        #
+#    Updated: 2023/10/06 20:01:07 by ddutta           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,16 +19,16 @@ CC = cc
 all: $(SERVER) $(CLIENT)
 $(SERVER):
 	$(CC) $(CFLAGS) server.c -o $(SERVER)
-	@echo "Server is Ready!"
+	@echo "server:ready"
 $(CLIENT):
 	$(CC) $(CFLAGS) client.c -o $(CLIENT)
-	@echo "Client is Ready!"
+	@echo "client:ready"
 
 clean:
-	@echo "clean successful"
+	@echo "clean successful :)"
 
 fclean: clean
 	@rm -f $(SERVER) $(CLIENT)
-	@echo "Server and Client Have Been Cleaned Successfully"
+	@echo "server and client cleaned successfully"
 
 re: fclean all
